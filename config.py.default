@@ -1,0 +1,5 @@
+class Config(object):
+    region="us-east-1"
+    snsTopic="serverless-demo-topic"
+    queueName="serverless-demo-queue"
+    s3Bucket="balihoo.sandbox.templates"
