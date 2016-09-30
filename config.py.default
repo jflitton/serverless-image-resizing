@@ -3,3 +3,4 @@ class Config(object):
     snsTopic="serverless-demo-topic"
     queueName="serverless-demo-queue"
     s3Bucket="balihoo.sandbox.templates"
+    s3Folder="serverless-image"
