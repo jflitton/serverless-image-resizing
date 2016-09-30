@@ -17,7 +17,7 @@ results = {
 queue = sqs.create_queue(QueueName=Config.queueName)
 
 def process():
-    # Get a message from the queue
+    # Get a message from the queue, waiting a max of 2 seconds for something to arrive
     messages = queue.receive_messages(WaitTimeSeconds=2)
 
     if len(messages) is 0:
