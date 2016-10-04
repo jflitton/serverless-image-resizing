@@ -6,15 +6,14 @@ from PIL import Image
 from datetime import datetime
 
 sqs = boto3.resource('sqs')
+queue = sqs.create_queue(QueueName=Config.queueName)
+
 s3 = boto3.resource('s3')
 bucket = s3.Bucket(Config.s3Bucket)
 
 message_found = True
 images_resized = 0
 start_time = datetime.now()
-
-# Get the queue's URL
-queue = sqs.create_queue(QueueName=Config.queueName)
 
 def process():
     # Get a message from the queue
